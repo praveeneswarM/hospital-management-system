@@ -8,9 +8,9 @@ spec:
     - name: praveen-gateway
   rules:
     - matches:
-        - path:
-            type: PathPrefix
-            value: /hospital
+      - path:
+          type: PathPrefix
+          value: /hospital
       filters:
         - type: URLRewrite
           urlRewrite:
