@@ -10,7 +10,7 @@ spec:
     - matches:
       - path:
           type: PathPrefix
-          value: /hospital
+          value: /
       filters:
         - type: URLRewrite
           urlRewrite:
