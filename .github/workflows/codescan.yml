@@ -20,6 +20,13 @@ jobs:
         env: 
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+      - name: Snyk Initialize
+        uses: snyk/actions/node@master
+        env: 
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
       
       - name: Success-Email
         if: job.status == 'Success'
