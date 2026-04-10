@@ -21,12 +21,23 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-      - name: Snyk Initialize
+      - name: Snyk Initialize Backend
         uses: snyk/actions/node@master
         env: 
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
+        working-directory: backend
+         
+      - name: Snyk Initialize Frontned
+        uses: snyk/actions/node@master
+        env: 
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
+        working-directory: public
+      
+
       
       - name: Success-Email
         if: job.status == 'Success'
