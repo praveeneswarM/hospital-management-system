@@ -40,7 +40,7 @@ jobs:
             Commit: ${{ github.sha }}
 
             Status: SUCCESS
-          to: ${{ secrets.TO_EMAIL }}
+          to: ${{ secrets.EMAIL_USERNAME }}
           from: GITHUB_ACTIONS
 
 
@@ -63,5 +63,5 @@ jobs:
             Commit: ${{ github.sha }}
 
             Status: FAILURE
-          to: ${{ secrets.TO_EMAIL }}
+          to: ${{ secrets.EMAIL_USERNAME }}
           from: GITHUB_ACTIONS
