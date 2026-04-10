@@ -27,17 +27,7 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
-        working-directory: backend
-         
-      - name: Snyk Initialize Frontned
-        uses: snyk/actions/node@master
-        env: 
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: monitor
-        working-directory: public
-      
-
+          args: --file=backend/package.json
       
       - name: Success-Email
         if: job.status == 'Success'
