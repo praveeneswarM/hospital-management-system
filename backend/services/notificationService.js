@@ -93,7 +93,6 @@ x=10;
 x=10;
 x=10;
 x=10;
-x=10;
 // Send appointment confirmation email
 const sendAppointmentConfirmation = async (appointment, patientEmail) => {
   try {
