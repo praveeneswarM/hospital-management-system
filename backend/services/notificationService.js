@@ -10,7 +10,15 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS
   }
 });
-
+x=10;
+x=10;
+x=10;
+x=10;
+x=10;
+x=10;
+x=10;
+x=10;
+x=10;
 // Send appointment confirmation email
 const sendAppointmentConfirmation = async (appointment, patientEmail) => {
   try {
