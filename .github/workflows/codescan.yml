@@ -40,8 +40,8 @@ jobs:
             Commit: ${{ github.sha }}
 
             Status: SUCCESS
-          to: praveeneswarmadhes@gmail.com
-          from: praveeneswarmadhes@gmail.com
+          to: ${{ secrets.TO_EMAIL }}
+          from: GITHUB_ACTIONS
 
 
       - name: Failed-Email
@@ -63,5 +63,5 @@ jobs:
             Commit: ${{ github.sha }}
 
             Status: FAILURE
-          to: praveeneswarmadhes@gmail.com
-          from: praveeneswarmadhes@gmail.com
+          to: ${{ secrets.TO_EMAIL }}
+          from: GITHUB_ACTIONS
